@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- M-Farman-11 (1913-1919) LesterBoffo
+     
+     wingspan     : 10.50 m         (33.83 ft)
+     length       : 12.67 m         (38.28 ft)
+     Empty weight : 460 kg          (840 lb)
+     Engine       : 1 x Renault 8C aircooled V8 
+     Speed        : 101 km/h         (57 kts)
+-->
+     
+<airplane mass="1130">
+
+  <approach speed="36" aoa="5">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.25"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1"/>
+  </approach>
+  
+  <cruise speed="59" alt="5000">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.95"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="0.99"/>
+  </cruise>
+  
+  <cockpit x="2.092" y="0" z="0.630"/>
+
+  <!-- Fuse and sticks -->
+
+   <fuselage ax="2.494" ay=" 0.0" az=" -0.128" bx="1.32" by=" 0.0" bz=" 0.134" width="0.681" taper="0.92" midpoint="0.5"/>
+<!-- left -->
+  <fuselage ax="-0.7006" ay="1.6653" az=" 1.25543" bx="-6.3722" by=" 1.6653" bz=" 1.03920" width="0.035" taper="1" midpoint="0.5"/>
+  <fuselage ax="-0.78878" ay="-1.6653" az="1.25543" bx="-6.3722" by="-1.6653" bz="-0.45860" width="0.035" taper="1" midpoint="0.5"/>
+  <!-- Right -->
+  <fuselage ax="-0.6928" ay="1.6653" az="-0.7006" bx="-6.3722" by="1.6653" bz="0.1134" width="0.035" taper="1" midpoint="0.5"/>
+  <fuselage ax="-0.6928" ay="-1.6653" az="-0.7006" bx="-6.3722" by="-1.6653" bz="0.1134" width="0.035" taper="1" midpoint="0.5"/>
+  
+  <wing x="0.395" y="0" z="1.32963"
+        chord="2.018" 
+        length="8.247"
+        incidence="1"
+        twist="1.0" 
+        taper="1" 
+        camber="0.06">
+        <stall aoa="16" width="3" peak="1"/>
+        <flap0 start="0.625" end="1" lift="1.30" drag="1.37"/>
+
+        <control-input axis="/controls/flight/aileron" control="FLAP0" split="true"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP0" split="true"/>
+
+        <control-output control="FLAP0" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP0" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+  </wing>
+
+  <mstab x="0.395" y="0" z="-0.49" 
+         chord="2.018" 
+         length="5.847" 
+         taper="1" 
+         incidence="1" 
+         camber="0.06">
+         <stall aoa="16" width="3" peak="1"/>
+  </mstab>
+
+  <hstab x="-6.132" y="0" z="0.014"
+         chord="1.248" 
+         length="2.427" 
+         incidence="0.25" 
+         taper="1"
+         effectiveness="1.45" 
+         camber="0.01">
+         <stall aoa="16" width="4" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.6" drag="1.32"/> 
+
+         <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+         <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+  </hstab>
+
+   <vstab x="-6.0534" y="1.663" z="0.642"
+          chord="1.445" 
+          length="1.005" 
+          taper="0.60">
+          <stall aoa="14" width="4" peak="1.5"/>
+          <flap0 start="0" end="1" lift="1.5" drag="1.12"/>
+
+          <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+          <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+
+          <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
+   </vstab>
+
+   <vstab x="-6.0534" y="-1.663" z="0.642"
+          chord="1.445" 
+          length="1.005" 
+          taper="0.60">
+          <stall aoa="14" width="4" peak="1.5"/>
+          <flap0 start="0" end="1" lift="1.5" drag="1.12"/>
+
+          <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+          <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+
+          <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
+  </vstab>
+
+    <!-- Engines      : RAF Renault 8C clone
+
+       Informations : http://en.wikipedia.org/wiki/Renault 8C
+
+       Type         : 8-cylinder air-cooled 90 deg Vee piston engine
+       Power        : 80 hp at 1700 rpm / 90 hp at 1600 rpm for brief periods
+       Compression  : 4.2:1
+       Masse        : 463 lb  ( 180 kg )
+       Displacement : 548.9 in3 ( 9.02 l  )
+  
+  -->
+
+
+  <propeller x="-0.687" y="0.0" z="0.146"  
+             radius="1.51"
+             mass="463"       
+             moment="18.5"
+             blades="2"
+             cruise-power="75"
+             cruise-alt="5000" 
+             cruise-speed="59"
+             cruise-rpm="790"
+             gear-ratio="0.5"
+             takeoff-power="80"
+             takeoff-rpm="850">
+             <actionpt x="-1.198" y="0" z="0.139"/>
+             <piston-engine eng-rpm="1700"  
+                            alt="5000" 
+                            eng-power="80"
+                            bore="4.13"
+                            stroke="5.12"
+                            compression-ratio="4.3"
+                            min-throttle="0.056"
+                            displacement="548.9"/>
+             <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle"/>
+             <control-input control="STARTER" axis="/controls/engines/engine[0]/starter"/>
+             <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos"/>
+             <control-input control="MIXTURE" axis="/controls/engines/engine[0]/mixture"/> 
+  </propeller>
+
+  <!-- left -->
+  <gear x="0.2962" y="2.069" z="-1.972"
+        compression="0.12"
+        spring="1.16"
+        sfric="0.42"
+        dfric="0.83">
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+  </gear>
+
+  <gear x="0.2962" y="1.2483" z="-1.972"
+        compression="0.12"
+        spring="1.16"
+        sfric="0.42"
+        dfric="0.83">
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+  </gear>
+
+  <!-- right -->
+  <gear x="0.2962" y="-1.2483" z="-1.972"
+        compression="0.12"
+        spring="1.16"
+        sfric="0.42"
+        dfric="0.83">
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+  </gear>
+
+    <gear x="0.2962" y="-2.069" z="-1.972"
+        compression="0.12"
+        spring="1.16"
+        sfric="0.42"
+        dfric="0.83">
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+  </gear>
+
+  <!-- rear-left skid -->
+  <gear x="-5.0736" y="1.6258" z="-0.6259"
+        skid="1"
+        compression="0.04"
+        spring="1.16"
+        sfric="0.72"
+        dfric="0.83">
+    <control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0="0.15" dst1="-0.15"/>
+  </gear>
+
+  <!-- rear-right skid -->
+  <gear x="-5.0736" y="-1.6258" z="-0.6259"
+        skid="1"
+        compression="0.04"
+        spring="1.16"
+        sfric="0.72"
+        dfric="0.83">
+    <control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0="0.15" dst1="-0.15"/>
+  </gear>
+
+  <!-- front skids -->
+  <gear x="2.24732" y="1.6258" z="-1.5732" 
+        skid="1"
+        compression="0.01"
+        spring="3.6"
+        sfric="0.92"
+        dfric="0.93">
+  </gear>
+
+  <gear x="2.24732" y="-1.6258" z="-1.5732" 
+        skid="1"
+        compression="0.01"
+        spring="3.6"
+        sfric="0.92"
+        dfric="0.93">
+  </gear>
+
+       <!-- Pilot Weight -->
+ <weight x="1.428" y="0.00" z=" 0.113" mass-prop="/sim/weight[0]/weight-lb"/>
+ <weight x="0.628" y="0.00" z=" 0.113" mass-prop="/sim/weight[1]/weight-lb"/>
+  
+  <!-- Reservoir -->
+  <tank x="0.259" y="0" z="0.1966" capacity="232"/>
+
+  <ballast x="0.65" y="0" z="-0.92" mass="300"/>
+
+</airplane>

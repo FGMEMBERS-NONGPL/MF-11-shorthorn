@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+
+  <!-- Fuel -->
+  <model>
+    <path>Aircraft/MF-11-shorthorn/Models/instruments/fuel/fuel.xml</path>
+    <offsets>
+      <x-m>  -0.203 </x-m>
+      <y-m>  -0.18 </y-m>
+      <z-m>  0.01 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 180.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Fuel valve -->
+  <model>
+    <path>Aircraft/MF-11-shorthorn/Models/instruments/fuelvalve/fuel-valve.xml</path>
+    <offsets>
+      <x-m>  -0.203 </x-m>
+      <y-m>  -0.168 </y-m>
+      <z-m>  0.029 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 180.0 </heading-deg>
+    </offsets>
+  </model>
+
+    <!-- RPM -->
+  <model>
+    <path>Aircraft/MF-11-shorthorn/Models/instruments/tach/tach.xml</path>
+    <offsets>
+      <x-m>  -1.85 </x-m>
+      <y-m>  -0.20 </y-m>
+      <z-m>  0.458 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   -16.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+ <!-- Altitude -->
+  <model>
+    <path>Aircraft/MF-11-shorthorn/Models/instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  -1.865 </x-m>
+      <y-m>   0.0 </y-m>
+      <z-m>  0.541 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>    -16.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Compass -->
+  <model>
+    <path>Aircraft/MF-11-shorthorn/Models/instruments/compass/compass.xml</path>
+    <offsets>
+      <x-m>  -1.685 </x-m>
+      <y-m> -0.237 </y-m>
+      <z-m>  -0.100 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/MF-11-shorthorn/Models/instruments//asi/asi.xml</path>
+    <offsets>
+      <x-m>  -1.845 </x-m>
+      <y-m>  0.20 </y-m>
+      <z-m>   0.458 </z-m>
+      <roll-deg>      0.000 </roll-deg>
+      <pitch-deg>    -16.000 </pitch-deg>
+      <heading-deg> -0.000 </heading-deg>
+    </offsets>
+  </model>
+
+</PropertyList>
