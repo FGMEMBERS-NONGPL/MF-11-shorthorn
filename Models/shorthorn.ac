@@ -1605,7 +1605,7 @@ kids 0
 OBJECT poly
 name "mixtureknob"
 loc 0.975507 -1.28512 -0.446199
-texture "C:/Program Files/FlightGear2.12/data/Aircraft/HFarman-20/Models/farman_f40.png"
+texture "Aircraft/HFarman-20/Models/farman_f40.png"
 numvert 92
 -2.55354 1.48369 0.745406
 -2.55354 1.48757 0.752922
